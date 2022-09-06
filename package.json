@@ -1,0 +1,26 @@
+{
+  "name": "readme.md_generator",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Gauthier",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scott-Gauthier/09-Challenge.git"
+  },
+  "keywords": [
+    "readme.md",
+    "generator"
+  ],
+  "bugs": {
+    "url": "https://github.com/Scott-Gauthier/09-Challenge/issues"
+  },
+  "homepage": "https://github.com/Scott-Gauthier/09-Challenge#readme"
+}
