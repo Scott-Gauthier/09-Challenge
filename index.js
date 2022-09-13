@@ -16,11 +16,6 @@ const questions = [
         name: 'description',
         default: "Project Description",
     },
-    // {
-    //     type: 'input',
-    //     message: 'What is your Project Table of Contents?',
-    //     name: 'table_of_contents',
-    // },
     {
         type: 'input',
         message: 'What is your Project Installation?',

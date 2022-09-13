@@ -11,18 +11,18 @@ function generateBadge(data) {
   // If there is no license, return an empty string
     case `GNU General Public License (GPL)`:
       licenseBadge = `[![License](https://img.shields.io/badge/License-GNU_General_Public_2.0-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`;
-      break;
+    break;
   // TODO: Create a function that returns the license section of README
   // If there is no license, return an empty string
     case `MIT license`:
       licenseBadge = `[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://www.mit.edu/~amini/LICENSE.md)`;
-      break;
+    break;
     case `Mozilla Public License 2.0`:
       licenseBadge = `[![License](https://img.shields.io/badge/License-Mozilla_Public_2.0-blue.svg)](https://www.mozilla.org/en-US/MPL/2.0/)`;
-      break;
+    break;
     case `The Unlicense`:
       licenseBadge = `[![License](https://img.shields.io/badge/License-The_Unlicense-blue.svg)](https://unlicense.org/)`;
-      break;
+    break;
     default:
       licenseBadge = "";
     }
@@ -74,5 +74,4 @@ function generateMarkdown(data) {
           If you would like to contact me with additional questions I can be reached at ${data.email}.
   `;
 }
-
 module.exports = generateMarkdown;
