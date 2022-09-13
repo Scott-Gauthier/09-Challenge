@@ -1,15 +1,32 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
+function generateBadge(data) {
+  license = data.license;
+  //let license1 = data.license;
+  switch(license) {
+  // TODO: Create a function that returns a license badge based on which license is passed in
+  // If there is no license, return an empty string
+    case `Apache License 2.0`:
+      licenseBadge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)`;
+    break;
+  // TODO: Create a function that returns the license link
+  // If there is no license, return an empty string
+    case `GNU General Public License (GPL)`:
+      licenseBadge = `[![License](https://img.shields.io/badge/License-GNU_General_Public_2.0-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`;
+      break;
+  // TODO: Create a function that returns the license section of README
+  // If there is no license, return an empty string
+    case `MIT license`:
+      licenseBadge = `[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://www.mit.edu/~amini/LICENSE.md)`;
+      break;
+    case `Mozilla Public License 2.0`:
+      licenseBadge = `[![License](https://img.shields.io/badge/License-Mozilla_Public_2.0-blue.svg)](https://www.mozilla.org/en-US/MPL/2.0/)`;
+      break;
+    case `The Unlicense`:
+      licenseBadge = `[![License](https://img.shields.io/badge/License-The_Unlicense-blue.svg)](https://unlicense.org/)`;
+      break;
+    default:
+      licenseBadge = "";
+    }
+}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   //create variables from users answers
@@ -22,20 +39,14 @@ function generateMarkdown(data) {
     tests = data.tests;
     questions = data.questions;
 
-    Table_of_Contents = `## **Table of Contents**
-    /n [Description](#Description)
-
-    `
-
-
+    generateBadge(data);
 
   return `
-  # Title
-  ${data.title}
+  # ${data.title}    ${licenseBadge}
   # Description
   ${data.description}
   # Table of Contents
-  - [Title](#Title)
+  - [Title](#${data.title})
   - [Description](#Description)
   - [Installation instructions](#Installation)
   - [Usage](#Usage)
@@ -49,16 +60,18 @@ function generateMarkdown(data) {
   # Usage
   ${data.usage}
   # License
-  ${data.license}
+  This project is covered under ${data.license}.
   # Contributing
-  ${data.contributing}
+  If you would like to contribute to this project and add ideas please reach out to ${data.contributing}
   # Tests
   ${data.tests}
   # Questions
       ## GitHub username
-      ${data.username}
+          ${data.username}
+      ## GitHub Repository
+          https://github.com/${data.username}
       ## Email address
-      If you would like to contact me with additional questions I can be reached at ${data.email}.
+          If you would like to contact me with additional questions I can be reached at ${data.email}.
   `;
 }
 
