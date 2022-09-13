@@ -31,5 +31,5 @@
           If you would like to contact me with additional questions I can be reached at Gauthier.scott@gmail.com.
   # Walkthrough video
   https://drive.google.com/file/d/196GhmjmniFNdk6HBFWAaQ5ELcT73i5mY/view
-  #Github URL
+  # Github URL
   https://github.com/Scott-Gauthier/09-Challenge
